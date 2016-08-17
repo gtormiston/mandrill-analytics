@@ -1,28 +1,38 @@
-== README
+# Mandrill Analytics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A program that provides analytics on historical information stored via Mandrill web hooks.
 
-Things you may want to cover:
+### Approach
 
-* Ruby version
+- Framework: Rails - quick setup, convention over configuration
+- Data store: PostgreSQL
+- Testing: RSpec
 
-* System dependencies
+### How to use
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Download or clone this repo
+2.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### User stories
+
+```text
+As a company
+So that we can perform research on our campaigns
+We want to receive and store information via Mandrill web hooks
+```
+```text
+As a company
+So that we can identify past trends and improve future performance
+We would like to display statistics on email campaigns
+```
+
+### Requirements
+
+The platform should display the following statistics:
+
+- total number of emails sent
+- total number of emails opened
+- total number of clicks
+- open rate per email type
+- click rate per email type
