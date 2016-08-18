@@ -11,7 +11,7 @@ A program that provides analytics on historical information stored via Mandrill 
 ### How to use
 
 1. Download or clone this repo
-2.
+2. Run `rake db:create` to create the database
 
 
 ### User stories
