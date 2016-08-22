@@ -1,3 +1,24 @@
-<p>
-  Hello, world!
-</p>
+<h1>Mandrill Analytics</h1>
+
+<h3>Basic analytics</h3>
+<p>Emails sent: <%= email_count["send"] %></p>
+<p>Emails opened: <%= email_count["open"] %></p>
+<p>Emails clicked: <%= email_count["click"] %></p>
+
+<h3>Open rate (email type, percentage opened)</h3>
+<!-- iterate through each type of email here -->
+
+<p>Order: <%= calculate_rate("Order","open") %></p>
+<p>User confirmation: <%= calculate_rate("UserConfirmation","open") %></p>
+<p>Shipment: <%= calculate_rate("Shipment","open") %></p>
+<p>Refer a friend: <%= calculate_rate("ReferAFriend","open") %></p>
+<p>Get a book discount: <%= calculate_rate("GetABookDiscount","open") %></p>
+
+<h3>Click rate (email type, percentage clicked)</h3>
+<!-- iterate through each type of email here -->
+
+<p>Order: <%= calculate_rate("Order","click") %></p>
+<p>User confirmation: <%= calculate_rate("UserConfirmation","click") %></p>
+<p>Shipment: <%= calculate_rate("Shipment","click") %></p>
+<p>Refer a friend: <%= calculate_rate("ReferAFriend","click") %></p>
+<p>Get a book discount: <%= calculate_rate("GetABookDiscount","click") %></p>
