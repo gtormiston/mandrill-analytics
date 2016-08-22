@@ -8,6 +8,18 @@ A program that provides analytics on historical information stored via Mandrill 
 - Data store: PostgreSQL
 - Testing: RSpec
 
+
+Decided on simple one table structure to hold all webhooks entries in the same order as the JSON entries coming from the sample data payloads.
+
+Emails table:
+
+| ID | Address | EmailType | Event | Timestamp |
+| INT | VARCHAR | VARCHAR | VARCHAR | INT |
+
+
+
+
+
 ### How to use
 
 1. Download or clone this repo
