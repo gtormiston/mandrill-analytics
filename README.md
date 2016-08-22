@@ -8,7 +8,7 @@ A program that provides analytics on historical information stored via Mandrill 
 - Data store: PostgreSQL table
 - Testing: RSpec
 
-I opted for the simplest, quickest setup I could - minimal gems / libraries and as much convention as possible to avoid getting bogged down. With Rails I should be able to add in extra features such as user authentication easily later.
+I opted for the simplest, quickest setup I could - minimal gems / libraries and as much convention as possible to avoid getting bogged down. With Rails I will be able to add in extra features such as user authentication easily later.
 
 **Table design**:
 
@@ -23,6 +23,7 @@ I generated the model for *Webhook* (I think probably a pretty poor choice of na
 I utilised a couple of simple, re-useable methods to try and keep the code as clean and small as possible - in effect two methods doing the calculating or logic:
 
 `email_count` is a very short method that uses the Rails 'group' feature to create a useable hash of all the records which I can then easily re-use by specifying the field I want to run the 'count' method on.
+
 `calculate_rate` could do with some refactoring, but is another re-useable method, this time taking a couple of arguments that allow me to state which rate I wish to calculate, and for which email type.
 
 **Challenges**:
