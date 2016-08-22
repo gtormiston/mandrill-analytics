@@ -4,17 +4,23 @@ A program that provides analytics on historical information stored via Mandrill 
 
 ### Approach
 
-- Framework: Rails - quick setup, convention over configuration
-- Data store: PostgreSQL
+- Framework: Rails - quick setup, convention over configuration, same system that Lostmy.name use in production
+- Data store: PostgreSQL table
 - Testing: RSpec
 
 
-Decided on simple one table structure to hold all webhooks entries in the same order as the JSON entries coming from the sample data payloads.
+Table design:
 
-Emails table:
+I decided to use a single table structure to store all webhook entries in the same order as the JSON entries coming from the sample data payloads, essentially:
 
-| ID | Address | EmailType | Event | Timestamp |
-| INT | VARCHAR | VARCHAR | VARCHAR | INT |
+| id | address | emailtype | event | timestamp |
+| INT | STRING | STRING | STRING | INT |
+
+I generated the model for webhook, which created the table for me (along with 'created_at', and 'updated_at' tables which I didn't actually want).
+I then added a migration for each of the columns in the table to match the design above.
+
+
+
 
 
 
